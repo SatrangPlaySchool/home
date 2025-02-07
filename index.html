@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden;
         }
         h2 {
             font-family: 'Raleway', sans-serif;
@@ -21,10 +22,12 @@
         }
         .hero {
             height: 100vh;
-            background: "#c2e3f4";
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 100vw;
+            overflow: hidden;
+            background: #c2e3f4;
         }
         header {
             background: #c2e3f4;
@@ -33,6 +36,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            box-sizing: border-box;
         }
         .logo img {
             width: 50px;
@@ -46,10 +50,17 @@
             color: black;
             font-weight: bold;
         }
+        .banner {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .banner img {
             width: 100%;
             height: auto;
-            flex-grow: 1;
+            object-fit: cover;
         }
         .downward-arrow {
             display: flex;
