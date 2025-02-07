@@ -6,6 +6,65 @@
     <title>Satrang Play School</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #ffcc00;
+            padding: 20px;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .gallery-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .contact {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .map-container iframe {
+            width: 45%;
+            height: 300px;
+            border: 0;
+        }
+        @media (max-width: 768px) {
+            .map-container iframe {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -45,5 +104,11 @@
             <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Website loaded successfully!");
+        });
+    </script>
 </body>
 </html>
