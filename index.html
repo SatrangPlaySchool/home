@@ -77,49 +77,30 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
         }
-         .about {
+        .about {
             height: 50vh;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .about img {
-            width: 50%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .about-text {
-            width: 50%;
-            padding: 20px;
-        gallery {
-            height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f9f9f9;
-            padding: 20px;
-        }
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            width: 100%;
-            max-width: 1200px;
-        }
-        .gallery-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .contact-footer {
-            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            background: #c2e3f4;
+            justify-content: center;
+        }
+        .gallery {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #f9f9f9;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery-container img {
+            width: 30%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
         }
         .contact {
             padding: 20px;
@@ -129,12 +110,6 @@
             text-decoration: none;
             color: #333;
             font-size: 24px;
-        }
-        .map-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
         }
         .map-container iframe {
             width: 45%;
@@ -147,16 +122,6 @@
             text-align: center;
         }
         @media (max-width: 768px) {
-
-            .about {
-                flex-direction: column;
-            }
-            .about img, .about-text {
-                width: 100%;
-            }
-            .gallery-container img {
-                width: 90%;
-            }
             .map-container iframe {
                 width: 100%;
             }
@@ -184,11 +149,8 @@
     </div>
     
     <section id="about" class="about">
-        <img src="about.jpg" alt="About Image">
-        <div class="about-text">
-            <h2>About Us</h2>
-                <p>Welcome to Satrang Play School, where learning meets fun! Our mission is to provide a nurturing environment for children to explore and grow.</p>
-        </div>
+        <h2>About Us</h2>
+        <p>Welcome to Satrang Play School, where learning meets fun! Our mission is to provide a nurturing environment for children to explore and grow.</p>
     </section>
     
     <section id="gallery" class="gallery">
@@ -199,8 +161,7 @@
             <img src="school3.jpg" alt="Activity Room">
         </div>
     </section>
-
-    <div class="contact-footer">
+    
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Follow us on social media or visit us at our branches!</p>
@@ -219,8 +180,6 @@
     <footer class="footer">
         <p>&copy; 2025 Satrang Play School. All rights reserved.</p>
     </footer>
-    </section>
-    </div>
     
     <script>
         function scrollToSection(id) {
