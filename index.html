@@ -16,23 +16,35 @@
         header {
             background: #ffcc00;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .logo img {
-            width: 100px;
+            width: 50px;
+        }
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
         }
         .banner img {
             width: 100%;
             height: auto;
         }
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px 20px;
-            font-size: 24px;
+        .downward-arrow {
+            display: block;
+            margin: 10px auto;
+            font-size: 30px;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
         }
         .gallery-container {
             display: flex;
@@ -69,20 +81,25 @@
 <body>
     <header>
         <div class="logo"> <img src="logo.png" alt="School Logo"> </div>
-        <h1>Satrang Play School</h1>
+        <nav class="navbar">
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     
     <section class="banner">
         <img src="banner.jpg" alt="School Banner">
-        <div class="overlay">Welcome to Satrang Play School</div>
     </section>
     
-    <section class="about">
+    <div class="downward-arrow">&#x2193;</div>
+    
+    <section id="about" class="about">
         <h2>About Us</h2>
         <p>Welcome to Satrang Play School, where learning meets fun! Our mission is to provide a nurturing environment for children to explore and grow.</p>
     </section>
     
-    <section class="gallery">
+    <section id="gallery" class="gallery">
         <h2>Our School</h2>
         <div class="gallery-container">
             <img src="school1.jpg" alt="Classroom">
@@ -91,16 +108,17 @@
         </div>
     </section>
     
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Follow us on social media or visit us at our branches!</p>
         <div class="social-links">
             <a href="#">Facebook</a>
-            <a href="https://www.instagram.com/playschoolsatrang/">Instagram</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
-            <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
     
