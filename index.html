@@ -22,12 +22,12 @@
         }
         .hero {
             height: 100vh;
+            background: #c2e3f4;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: 100vw;
             overflow: hidden;
-            background: #c2e3f4;
         }
         header {
             background: #c2e3f4;
@@ -69,21 +69,36 @@
             color: #333;
             animation: bounce 1.5s infinite;
             margin-bottom: 20px;
+            cursor: pointer;
         }
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
         }
+        .about {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .gallery {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #f9f9f9;
+        }
         .gallery-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
             flex-wrap: wrap;
         }
         .gallery-container img {
-            width: 200px;
-            height: auto;
+            width: 250px;
+            height: 150px;
             border-radius: 10px;
+            object-fit: cover;
         }
         .contact {
             background: #f4f4f4;
@@ -98,6 +113,11 @@
             width: 45%;
             height: 300px;
             border: 0;
+        }
+        .footer {
+            background: #c2e3f4;
+            padding: 10px;
+            text-align: center;
         }
         @media (max-width: 768px) {
             .map-container iframe {
@@ -121,7 +141,7 @@
             <img src="banner.jpg" alt="School Banner">
         </section>
         
-        <div class="downward-arrow">
+        <div class="downward-arrow" onclick="scrollToSection('about')">
             <span class="material-icons">keyboard_arrow_down</span>
         </div>
     </div>
@@ -143,10 +163,12 @@
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Follow us on social media or visit us at our branches!</p>
+        <p>Phone: +1234567890, +0987654321</p>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
         </div>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?" allowfullscreen="" loading="lazy"></iframe>
@@ -154,10 +176,14 @@
         </div>
     </section>
     
+    <footer class="footer">
+        <p>&copy; 2025 Satrang Play School. All rights reserved.</p>
+    </footer>
+    
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("Website loaded successfully!");
-        });
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
