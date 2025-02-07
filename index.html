@@ -1,43 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satrang Play School</title>
-    <style>
-        /* CSS styling will go here */
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <div id="logo">
-            </div>
+        <div class="logo"> <img src="logo.png" alt="School Logo"> </div>
         <h1>Satrang Play School</h1>
-        <nav>
-            </nav>
     </header>
-
-    <section id="about">
+    
+    <section class="banner">
+        <img src="banner.jpg" alt="School Banner">
+        <div class="overlay">Welcome to Satrang Play School</div>
+    </section>
+    
+    <section class="about">
         <h2>About Us</h2>
-        <p>A brief description of Satrang Play School...</p>
-        <img src="image1.jpg" alt="School Image 1">
-        <img src="image2.jpg" alt="School Image 2">
+        <p>Welcome to Satrang Play School, where learning meets fun! Our mission is to provide a nurturing environment for children to explore and grow.</p>
     </section>
-
-    <section id="contact">
+    
+    <section class="gallery">
+        <h2>Our School</h2>
+        <div class="gallery-container">
+            <img src="school1.jpg" alt="Classroom">
+            <img src="school2.jpg" alt="Play Area">
+            <img src="school3.jpg" alt="Activity Room">
+        </div>
+    </section>
+    
+    <section class="contact">
         <h2>Contact Us</h2>
-        <p>Find us at:</p>
-        <div id="map1">
-            </div>
-        <div id="map2">
-            </div>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Email</a></li>
-        </ul>
+        <p>Follow us on social media or visit us at our branches!</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+        </div>
     </section>
-
-    <footer>
-        <p>&copy; 2023 Satrang Play School</p>
-    </footer>
 </body>
 </html>
